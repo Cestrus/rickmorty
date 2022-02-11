@@ -6,7 +6,7 @@ const App = () => {
   return (
     <Layout>
       <Home />
-      <Details />
+      {/* <Details /> */}
     </Layout>
   );
 };

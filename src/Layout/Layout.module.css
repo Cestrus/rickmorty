@@ -1,19 +1,25 @@
 .container {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  grid-template-areas:
+    'header header header header'
+    '. main main .'
+    'footer footer footer footer';
+  grid-template-rows: 150px 1fr 100px;
+  grid-template-columns: 15% 35% 35% 15%;
 }
 
 .header {
-  height: 150px;
+  grid-area: header;
 }
 
 .main {
-  height: auto;
+  grid-area: main;
 }
 
 .footer {
-  height: 100px;
+  grid-area: footer;
 }

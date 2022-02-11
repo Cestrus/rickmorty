@@ -1,0 +1,12 @@
+.button {
+  height: 30px;
+  width: 100px;
+  background-color: #262c3a;
+  color: #08b2c9;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #262c3a;
+}
+
+.wrapper {
+  align-self: flex-end;
+}
