@@ -1,0 +1,15 @@
+.header {
+  width: 100%;
+  background-color: yellow;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.signUser {
+  height: 50%;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-right: 100px;
+}

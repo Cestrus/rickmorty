@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  width: 100%;
+  background-color: coral;
+}
+
+.copyright {
+  padding: 20px;
+  justify-content: center;
+  align-self: center;
+}
