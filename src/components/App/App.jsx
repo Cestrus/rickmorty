@@ -5,10 +5,8 @@ import Details from '../Details/Details';
 const App = () => {
   return (
     <Layout>
-      <div className="container">
-        <Home />
-        <Details />
-      </div>
+      <Home />
+      <Details />
     </Layout>
   );
 };

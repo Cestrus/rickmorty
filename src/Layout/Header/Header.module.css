@@ -1,15 +1,32 @@
 .header {
   width: 100%;
-  background-color: yellow;
+  background-color: #262c3a;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/799px-Rick_and_Morty.svg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: end;
   align-items: center;
 }
 
 .signUser {
-  height: 50%;
-  width: 100px;
-  border: 1px solid black;
-  border-radius: 20px;
-  margin-right: 100px;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  color: #08b2c9;
+  font-size: 14px;
+}
+
+.signIn {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.signIn:hover {
+  cursor: pointer;
+}
+
+.userName {
 }
