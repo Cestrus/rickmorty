@@ -2,8 +2,8 @@
   width: 100%;
   background-color: #262c3a;
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/799px-Rick_and_Morty.svg.png);
-  background-position: center;
-  background-size: contain;
+  background-position: 50px;
+  background-size: 30%;
   background-repeat: no-repeat;
   display: flex;
   justify-content: end;
