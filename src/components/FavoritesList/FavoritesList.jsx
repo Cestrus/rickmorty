@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import NoDataMessage from '../NoDataMessage/NoDataMessage';
 import Character from '../Character/Character';
 import styles from './FavoritesList.module.css';
+import PropTypes from 'prop-types';
 
 const FavoritesList = ({ favorites }) => {
   return (
@@ -30,3 +31,7 @@ const mapStateToProps = ({ favorites }) => {
 };
 
 export default connect(mapStateToProps)(FavoritesList);
+
+FavoritesList.propTypes = {
+  favorites: PropTypes.arrayOf(PropTypes.string),
+};

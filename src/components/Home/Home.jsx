@@ -4,6 +4,8 @@ import Pagination from '../Pagination/Pagination';
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import styles from './Home.module.css';
+import PropTypes from 'prop-types';
+import { CharacterPropTypes } from '../../assets/propTypes';
 import { useEffect } from 'react';
 import {
   loadCharactersPage,
@@ -67,3 +69,13 @@ const mapDispathToProps = {
 };
 
 export default connect(mapStateToProps, mapDispathToProps)(Home);
+
+Home.propTypes = {
+  charactersList: PropTypes.arrayOf(CharacterPropTypes),
+  currPage: PropTypes.number,
+  api: PropTypes.object.isRequired,
+  loading: PropTypes.func.isRequired,
+  loadCharactersPage: PropTypes.func.isRequired,
+  setCurrPage: PropTypes.func.isRequired,
+  setPages: PropTypes.func.isRequired,
+};

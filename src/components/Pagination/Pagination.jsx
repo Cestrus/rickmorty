@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import styles from './Pagination.module.css';
 import PagButton from '../PagButton/PagButton';
+import PropTypes from 'prop-types';
 
 const Pagination = ({ pages, currPage }) => {
   return (
@@ -25,3 +26,8 @@ const mapStateToProps = ({ pages, currPage }) => {
 };
 
 export default connect(mapStateToProps)(Pagination);
+
+Pagination.propTypes = {
+  currPage: PropTypes.number,
+  pages: PropTypes.number,
+};

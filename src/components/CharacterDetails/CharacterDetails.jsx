@@ -1,11 +1,12 @@
 import SimpleDiscr from '../SimpleDiscription/SimpleDiscription';
+import { CharacterPropTypes } from '../../assets/propTypes';
 import styles from './CharacterDetails.module.css';
+import Like from '../Like/Like';
 
 const CharacterDetails = ({ character }) => {
   const { name, type, gender, location, image, status, episode, created } =
     character;
   const editEpisodes = () => {
-    // console.log('==> ', character);
     const episodesList = episode.map((epHttp) => {
       return epHttp.match(/\d+/);
     });
@@ -43,8 +44,13 @@ const CharacterDetails = ({ character }) => {
           text={editEpisodes()}
         />
       </div>
+      <Like className={styles.like} character={character} />
     </div>
   );
 };
 
 export default CharacterDetails;
+
+CharacterDetails.propTypes = {
+  character: CharacterPropTypes.isRequired,
+};

@@ -6,6 +6,7 @@ import {
   loading,
   loadCharactersPage,
 } from '../../store/actionCreators';
+import PropTypes from 'prop-types';
 
 const api = new apiClient();
 
@@ -70,3 +71,12 @@ const mapStateToProps = ({ currPage, pages }) => {
 };
 
 export default connect(mapStateToProps, mapDispathToProps)(PagButton);
+
+PagButton.propTypes = {
+  direct: PropTypes.string.isRequired,
+  setCurrPage: PropTypes.func.isRequired,
+  loading: PropTypes.func.isRequired,
+  loadCharactersPage: PropTypes.func.isRequired,
+  currPage: PropTypes.number,
+  pages: PropTypes.number,
+};

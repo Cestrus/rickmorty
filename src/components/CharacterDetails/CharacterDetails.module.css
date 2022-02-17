@@ -3,8 +3,8 @@
   display: grid;
   grid-template-areas:
     'title title title title title'
-    'img img upper upper upper'
-    'img img medium medium medium'
+    'img img upper upper like'
+    'img img medium medium like'
     'bottom bottom bottom bottom bottom';
   grid-template-columns: 75px 75px repeat(3, 1fr);
   grid-template-rows: 70px 75px 75px 200px;
@@ -36,4 +36,7 @@
 .bottom {
   grid-area: bottom;
   margin-top: 20px;
+}
+.like {
+  grid-area: like;
 }

@@ -1,4 +1,5 @@
 import styles from './NoDataMessage.module.css';
+import PropTypes from 'prop-types';
 
 const NoDataMessage = ({ text }) => {
   return (
@@ -9,3 +10,7 @@ const NoDataMessage = ({ text }) => {
 };
 
 export default NoDataMessage;
+
+NoDataMessage.propTypes = {
+  text: PropTypes.string,
+};

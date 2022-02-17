@@ -1,5 +1,6 @@
 import styles from './Details.module.css';
 import CharacterDetails from '../CharacterDetails/CharacterDetails';
+import { CharacterPropTypes } from '../../assets/propTypes';
 import Button from '../Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -23,3 +24,7 @@ const mapStateToProps = ({ detailsCharacter }) => {
 };
 
 export default connect(mapStateToProps)(Details);
+
+Details.propTypes = {
+  detailsCharacter: CharacterPropTypes.isRequired,
+};

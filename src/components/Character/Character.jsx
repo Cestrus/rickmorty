@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { CharacterPropTypes } from '../../assets/propTypes';
+import PropTypes from 'prop-types';
 import SimpleDiscription from '../SimpleDiscription/SimpleDiscription';
 import Like from '../Like/Like';
 import styles from './Character.module.css';
@@ -39,3 +41,8 @@ const mapDispatchToProps = {
 };
 
 export default connect(null, mapDispatchToProps)(Character);
+
+Character.propTypes = {
+  character: CharacterPropTypes.isRequired,
+  setDetailsCharacter: PropTypes.func.isRequired,
+};

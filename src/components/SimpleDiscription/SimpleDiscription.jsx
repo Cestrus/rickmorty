@@ -1,4 +1,5 @@
 import styles from './SimpleDiscription.module.css';
+import PropTypes from 'prop-types';
 
 const SimpleDiscr = (props) => {
   const { title, text } = props;
@@ -13,3 +14,8 @@ const SimpleDiscr = (props) => {
 };
 
 export default SimpleDiscr;
+
+SimpleDiscr.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};

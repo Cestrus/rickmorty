@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { setDetailsCharacter } from '../../store/actionCreators';
+import PropTypes from 'prop-types';
+import { CharacterPropTypes } from '../../assets/propTypes';
 import styles from './NameList.module.css';
 
 const NameList = ({ list, loadNext, nextUrl, setDetailsCharacter }) => {
@@ -58,3 +60,9 @@ const mapDispatchToProps = {
 };
 
 export default connect(null, mapDispatchToProps)(NameList);
+
+NameList.propTypes = {
+  loadNext: PropTypes.func.isRequired,
+  nextUrl: PropTypes.string,
+  setDetailsCharacter: PropTypes.func.isRequired,
+};

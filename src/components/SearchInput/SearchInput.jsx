@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { connect } from 'react-redux';
 import styles from './SearchInput.module.css';
 import NameList from '../NameList/NameList';
+import PropTypes from 'prop-types';
 
 const SearchInput = ({ api }) => {
   const [list, setList] = useState([]);
@@ -67,3 +68,7 @@ const mapStateToProps = ({ api }) => {
 };
 
 export default connect(mapStateToProps)(SearchInput);
+
+SearchInput.propTypes = {
+  api: PropTypes.object.isRequired,
+};

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { connect } from 'react-redux';
 import { addFavorite, delFavorite } from '../../store/actionCreators.js';
 import * as utils from '../../utils/utils.js';
+import { CharacterPropTypes } from '../../assets/propTypes';
 
 const Like = (props) => {
   const { character, favorites, addFavorite, delFavorite } = props;
@@ -42,3 +43,7 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Like);
+
+Like.porpTypes = {
+  character: CharacterPropTypes.isRequired,
+};

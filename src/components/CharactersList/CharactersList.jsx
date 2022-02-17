@@ -1,5 +1,7 @@
 import Character from '../Character/Character';
 import NoDataMessage from '../NoDataMessage/NoDataMessage';
+import PropTypes from 'prop-types';
+import { CharacterPropTypes } from '../../assets/propTypes';
 import { connect } from 'react-redux';
 import Loader from '../Loader/Loader';
 import styles from './CharactersList.module.css';
@@ -33,3 +35,8 @@ const mapStateToProps = ({ isLoading, charactersList }) => {
 };
 
 export default connect(mapStateToProps)(CharactersList);
+
+CharactersList.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  charactersList: PropTypes.arrayOf(CharacterPropTypes).isRequired,
+};
