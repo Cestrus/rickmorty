@@ -1,0 +1,12 @@
+.discription {
+  color: #262c3a;
+  margin: 5px;
+  width: 90%;
+}
+.discription p {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-weight: bold;
+}

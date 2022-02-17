@@ -1,5 +1,25 @@
-const Details = () => {
-  return <div>HOME</div>;
+import styles from './Details.module.css';
+import CharacterDetails from '../CharacterDetails/CharacterDetails';
+import Button from '../Button/Button';
+import { useNavigate } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+const Details = ({ detailsCharacter }) => {
+  const navigate = useNavigate();
+  const clickHandler = () => {
+    navigate('/');
+  };
+
+  return (
+    <div className={styles.container}>
+      <CharacterDetails character={detailsCharacter} />
+      <Button name="Back" clickHandler={clickHandler} />
+    </div>
+  );
 };
 
-export default Details;
+const mapStateToProps = ({ detailsCharacter }) => {
+  return { detailsCharacter };
+};
+
+export default connect(mapStateToProps)(Details);

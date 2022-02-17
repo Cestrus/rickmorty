@@ -5,3 +5,11 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.title {
+  font-size: 28px;
+  text-align: center;
+  color: #262c3a;
+  margin-top: 50px;
+  font-weight: bold;
+}

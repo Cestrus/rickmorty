@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  width: 100px;
+  height: 100px;
+}
+.star {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+.star:hover {
+  cursor: pointer;
+}
+.star-empty {
+  background-image: url('../../assets/icons8-star-50.svg');
+}
+.star-full {
+  background-image: url('../../assets/icons8-star-50-_1__1.svg');
+}
