@@ -2,9 +2,38 @@
   width: 100%;
   display: grid;
   grid-template-areas:
-    'img img name name name name'
-    'details-left details-left details-left details-right details-right details-right';
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 200px 200px;
+    'title title title title title'
+    'img img upper upper upper'
+    'img img medium medium medium'
+    'bottom bottom bottom bottom bottom';
+  grid-template-columns: 75px 75px repeat(3, 1fr);
+  grid-template-rows: 70px 75px 75px 200px;
   margin-top: 100px;
+  font-size: 14px;
+}
+.title {
+  grid-area: title;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.img-wrapper {
+  grid-area: img;
+}
+.img-wrapper img {
+  height: 150px;
+}
+.upper {
+  grid-area: upper;
+  margin-left: 20px;
+}
+.medium {
+  grid-area: medium;
+  margin-left: 20px;
+}
+.bottom {
+  grid-area: bottom;
+  margin-top: 20px;
 }
